@@ -11,7 +11,7 @@ export class LoginComponent {
     alert("Login Called");
   }
 
-  getUser(name){
+  getUser(name:string){
     alert(`Hello ${name}`);
   }
 
