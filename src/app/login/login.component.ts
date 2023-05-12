@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  login(){
+    alert("Login Called");
+  }
+
+  getUser(name){
+    alert(`Hello ${name}`);
+  }
+
 }
