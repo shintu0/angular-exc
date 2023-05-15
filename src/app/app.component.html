@@ -34,3 +34,27 @@
 <app-student-list></app-student-list>
 
 <app-login></app-login>
+
+<!-- ----------------------------EVENTS------------------------------------------ -->
+
+<br/>
+<br/>
+<h1>---------EVENTS------------------</h1>
+<br/>
+<br/>
+
+
+<button (click)="getData()" >Call Func</button>
+<br/>
+<br/>
+<input (keyup)="getUserData($event)" />
+
+
+<br/>
+<br/>
+<input placeholder="Key Up" #keyUpId (keyup)="onKeyUp(keyUpId.value.toString())" />
+
+
+<br/>
+<br/>
+<input placeholder="Key Down" #keyDownId (keydown)="onKeyDown(keyDownId.value.toString())" />
