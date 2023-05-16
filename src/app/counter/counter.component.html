@@ -2,11 +2,49 @@
 
 <div class="counter bg-slate-500">
 
-  <button class="w-10 bg-black text-yellow-200 h-auto"   (click)="inc()" > Inc</button>
+  <button  class="w-10 bg-black text-yellow-200 h-auto"   (click)="inc()" > Inc</button>
 
   <h2 style="font-size: xx-large; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" >{{counter}}</h2>
 
-  <button style="width: max-content; height: max-content; color: brown; background-color: black; font-weight: 900; font-size: large;" (click)="dec()" > Dec</button>
+  <button [disabled]="counter===0?disabled:false" style="width: max-content; height: max-content; color: brown; background-color: black; font-weight: 900; font-size: large;" (click)="dec()" > Dec</button>
 
 </div>
+
+
+<!-- if else  -->
+
+<i class=" m-32 text-3xl font-bold underline flex justify-center border-red-400 border-2">
+  IF - ELSE
+</i>
+
+<h1  *ngIf="condition===false; then ifBlock else elseBlock" >
+
+</h1>
+
+
+<ng-template #ifBlock >
+  <h1 class="text-3xl font-bold underline text-center">If Block</h1>
+</ng-template>
+
+
+
+<ng-template #elseBlock >
+  <h1 class="text-3xl font-bold underline text-center" >Else Block</h1>
+</ng-template>
+
+
+<!-- if elseif else -->
+
+
+<ng-template [ngIf]="color==='RED'" >
+  <h1 class="text-3xl font-bold underline text-center text-red-900">RED</h1>
+</ng-template>
+
+<ng-template [ngIf]="color==='GREEN'" >
+  <h1 class="text-3xl font-bold underline text-center text-green-900">GREEN</h1>
+</ng-template>
+
+<ng-template [ngIf]="color==='BLUE'" >
+  <h1 class="text-3xl font-bold underline text-center text-blue-900">BLUE</h1>
+</ng-template>
 

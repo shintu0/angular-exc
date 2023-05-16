@@ -9,6 +9,13 @@ export class CounterComponent {
 
   public counter:number=0;
 
+  public disabled: boolean=true;
+
+  public condition: boolean=true;
+
+  public color:string='GREEN';
+
+
   inc(){
     this.counter++;
   }
