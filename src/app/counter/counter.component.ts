@@ -13,7 +13,14 @@ export class CounterComponent {
 
   public condition: boolean=true;
 
-  public color:string='GREEN';
+  public color:string='RED';
+
+  public users:{name:string,email:string}[]=[
+    {name:"Sintu",email:"sintu@domain.com"},
+    {name:"Anjali",email:"anjali@domain.com"},
+    {name:"Bryan",email:"bryan@domain.com"},
+    {name:"Bruce",email:"bruce@domain.com"}
+  ]
 
 
   inc(){

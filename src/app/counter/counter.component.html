@@ -37,14 +37,58 @@
 
 
 <ng-template [ngIf]="color==='RED'" >
-  <h1 class="text-3xl font-bold underline text-center text-red-900">RED</h1>
+  <h1 class="text-3xl font-bold  text-center text-red-900">RED</h1>
 </ng-template>
 
 <ng-template [ngIf]="color==='GREEN'" >
-  <h1 class="text-3xl font-bold underline text-center text-green-900">GREEN</h1>
+  <h1 class="text-3xl font-bold  text-center text-green-900">GREEN</h1>
 </ng-template>
 
 <ng-template [ngIf]="color==='BLUE'" >
-  <h1 class="text-3xl font-bold underline text-center text-blue-900">BLUE</h1>
+  <h1 class="text-3xl font-bold  text-center text-blue-900">BLUE</h1>
 </ng-template>
 
+
+<!-- Switch case -->
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+  <h1 class="text-3xl font-bold underline text-center" >Switch case</h1>
+
+
+<div class="border-3 border-red-400 rounded h-auto" [ngSwitch]="color">
+
+
+  <ng-template  [ngSwitchCase]="'RED'" >
+    <h1 class="text-3xl font-bold  text-center text-red-900">RED</h1>
+  </ng-template>
+
+  <ng-template [ngSwitchCase]="'GREEN'" >
+    <h1 class="text-3xl font-bold  text-center text-green-900">GREEN</h1>
+  </ng-template>
+
+  <ng-template [ngSwitchCase]="'BLUE'" >
+    <h1 class="text-3xl font-bold  text-center text-blue-900">BLUE</h1>
+  </ng-template>
+
+
+  <ng-template ngSwitchDefault >
+    <h1 class="text-3xl font-bold  text-center text-grey-900">Unknown color</h1>
+  </ng-template>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+<h1 class="text-3xl font-bold underline text-center" > For Loop</h1>
+
+
+<br/>
+<br/>
+<br/>
+
+<h1 class="text-3xl font-bold  text-center" *ngFor="let user of users" >Name:{{user.name}}, Email: {{user.email}}</h1>
