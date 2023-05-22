@@ -11,6 +11,11 @@ export class AppComponent {
 
   data:string="Some data string";
 
+  updateParentData(data:any){
+    console.warn(data);
+    this.data=data;
+  }
+
   getData(){
     return this.data;
   }
