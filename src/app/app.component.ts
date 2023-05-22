@@ -10,4 +10,8 @@ export class AppComponent {
 
   inputVal:string="";
 
+  getTemplateVar(el:HTMLElement){
+    console.log(el);
+  }
+
 }
