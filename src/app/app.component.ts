@@ -10,4 +10,9 @@ export class AppComponent {
 
   data:string="Hello";
 
+  onLogin(item:any){
+    console.log(item)
+
+  }
+
 }
