@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ListingModule } from './listing/listing.module';
 import { CounterComponent } from './counter/counter.component';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
 // import { UserListComponent } from './listing/user-list/user-list.component';
 // import { StudentListComponent } from './listing/student-list/student-list.component';
 
@@ -16,6 +17,7 @@ import { CounterComponent } from './counter/counter.component';
     LoginComponent,
     RegisterComponent,
     CounterComponent,
+    CapitalizePipe,
     // UserListComponent,
     // StudentListComponent
   ],
