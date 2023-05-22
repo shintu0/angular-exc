@@ -36,5 +36,5 @@
 <app-login></app-login>
 
 
-<app-child (updateParentDataEvent)="updateParentData($event)" ></app-child>
+<app-child [dataFromParent]="dataToChild" (updateParentDataEvent)="updateParentData($event)" ></app-child>
 <h1>{{data}}</h1>

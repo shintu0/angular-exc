@@ -11,6 +11,8 @@ export class AppComponent {
 
   data:string="Some data string";
 
+  dataToChild:string ="Parent value"
+
   updateParentData(data:any){
     console.warn(data);
     this.data=data;
