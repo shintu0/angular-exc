@@ -9,6 +9,7 @@ import { ListingModule } from './listing/listing.module';
 import { CounterComponent } from './counter/counter.component';
 import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RedElDirective } from './directives/red-el.directive';
 // import { UserListComponent } from './listing/user-list/user-list.component';
 // import { StudentListComponent } from './listing/student-list/student-list.component';
 
@@ -19,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegisterComponent,
     CounterComponent,
     CapitalizePipe,
+    RedElDirective,
     // UserListComponent,
     // StudentListComponent
   ],
