@@ -1,25 +1,62 @@
+<form class="flex-col justify-around  bg-slate-800 text-red-300 m-3 border-2 rounded-lg border-red-700"
+  #loginForm="ngForm" (ngSubmit)="onLogin(loginForm.value)">
+  <h1 class="font-bold text-3xl  text-center"> Template Driven Form</h1>
 
-<form class="flex-col justify-around  bg-slate-800 text-red-300 m-3 border-2 rounded-lg border-red-700" #loginForm="ngForm" (ngSubmit)="onLogin(loginForm.value)" >
-  <h1 class="font-bold text-3xl underline text-center" >Form</h1>
-
-    <div class="flex justify-between m-3" >
-      <label class="text-1xl font-semibold" >Name</label>
-    <input type="text" name="name" placeholder="Enter User Name" class="border-2 mx-3 w-3/4 border-red-300 rounded-lg px-3" ngModel />
-    </div>
-
-    <div class="flex justify-between m-3">
-      <label class="text-1xl font-semibold" >Password</label>
-    <input type="text" name="password" placeholder="Enter Password" class="border-2 mx-3 w-3/4 border-red-300 rounded-lg px-3" ngModel />
-    </div>
-
-    <div  class="flex justify-center m-3">
-      <button class=" text-center bg-inherit border-3 border-2 rounded-lg border-red-700 w-36 " >Login</button>
-    </div>
-
-  </form>
-
-  <div (click)="onLogin(loginForm.value)" class="flex justify-center m-3">
-    <button class=" text-center bg-inherit border-3 border-2 rounded-lg border-red-700 w-36 " >Login</button>
+  <div class="flex justify-between m-3">
+    <label class="text-1xl font-semibold">Name</label>
+    <input type="text" name="name" placeholder="Enter User Name"
+      class="border-2 mx-3 w-3/4 border-red-300 rounded-lg px-3" ngModel />
   </div>
 
+  <div class="flex justify-between m-3">
+    <label class="text-1xl font-semibold">Password</label>
+    <input type="password" name="password" placeholder="Enter Password"
+      class="border-2 mx-3 w-3/4 border-red-300 rounded-lg px-3" ngModel />
+  </div>
 
+  <div class="flex justify-center m-3">
+    <button class=" text-center bg-inherit border-3 border-2 rounded-lg border-red-700 w-36 ">Login</button>
+  </div>
+
+</form>
+
+<div (click)="onLogin(loginForm.value)" class="flex justify-center m-3">
+  <button class=" text-center bg-inherit border-3 border-2 rounded-lg border-red-700 w-36 ">Login</button>
+</div>
+
+<hr />
+<hr />
+<br />
+<br />
+<br />
+
+<form [formGroup]="loginRForm"
+  class="flex-col justify-around  bg-slate-800 text-red-300 m-3 border-2 rounded-lg border-red-700" #loginForm="ngForm"
+  (ngSubmit)="onUserLogin()">
+  <h1 class="font-bold text-3xl  text-center"> Reactive Form</h1>
+
+  <div class="flex justify-around m-3">
+    <label class="text-1xl font-semibold">Name</label>
+    <div class="flex-col ">
+      <input type="text" placeholder="Enter User Name" class="border-2 mx-1  border-red-300 rounded-lg px-3"
+        formControlName="user" />
+      <br />
+      <span class="mx-1  text-center text-red-600" *ngIf="user && user.invalid && user.touched">This is required</span>
+    </div>
+  </div>
+
+  <div class="flex justify-around m-3">
+    <label class="text-1xl font-semibold">Password</label>
+    <div class="flex-col ">
+      <input type="password" placeholder="Enter Password" class="border-2 mx-1  border-red-300 rounded-lg px-3"
+        formControlName="password" />
+        <br/>
+      <span class="mx-1  text-center text-red-600" *ngIf="password && password.invalid && password.touched">This is required</span>
+    </div>
+  </div>
+
+  <div class="flex justify-center my-7">
+    <button class=" text-center bg-inherit border-3 border-2 rounded-lg border-red-700 w-36 ">Login</button>
+  </div>
+
+</form>
