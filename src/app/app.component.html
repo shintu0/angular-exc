@@ -1,4 +1,4 @@
-<form class="flex-col justify-around  bg-slate-800 text-red-300 m-3 border-2 rounded-lg border-red-700"
+<!-- <form class="flex-col justify-around  bg-slate-800 text-red-300 m-3 border-2 rounded-lg border-red-700"
   #loginForm="ngForm" (ngSubmit)="onLogin(loginForm.value)">
   <h1 class="font-bold text-3xl  text-center"> Template Driven Form</h1>
 
@@ -61,4 +61,21 @@
 
 </form>
 
-<h1 appRedEl >Directives</h1>
+<h1 appRedEl >Directives</h1> -->
+
+
+<i class="text-3xl flex justify-center" >Routing</i>
+
+<div class="flex justify-around border-2 border-red-300 mx-3 rounded-lg">
+  <a  routerLink="">Home</a>
+  <a  routerLink="about">About</a>
+  <a  routerLink="user">User</a>
+</div>
+<br/>
+<br/>
+
+<div class="text-3xl flex justify-center">
+  <router-outlet >
+
+  </router-outlet>
+</div>
