@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { UserComponent } from './user/user.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AmoutMeComponent } from './about/amout-me/amout-me.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,10 @@ const routes: Routes = [
   },
   {
     path:"about",
-    component:AboutComponent
+    component:AboutComponent,
+    children:[
+      {path:"about-me",component:AmoutMeComponent}
+    ]
   },
   {
     path:"user/:id",

@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { UserComponent } from './user/user.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AmoutMeComponent } from './about/amout-me/amout-me.component';
 // import { UserListComponent } from './listing/user-list/user-list.component';
 // import { StudentListComponent } from './listing/student-list/student-list.component';
 
@@ -29,6 +30,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AboutComponent,
     UserComponent,
     NotFoundComponent,
+    AmoutMeComponent,
     // UserListComponent,
     // StudentListComponent
   ],
