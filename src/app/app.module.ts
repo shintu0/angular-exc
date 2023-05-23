@@ -13,6 +13,7 @@ import { RedElDirective } from './directives/red-el.directive';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { UserComponent } from './user/user.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 // import { UserListComponent } from './listing/user-list/user-list.component';
 // import { StudentListComponent } from './listing/student-list/student-list.component';
 
@@ -27,6 +28,7 @@ import { UserComponent } from './user/user.component';
     HomeComponent,
     AboutComponent,
     UserComponent,
+    NotFoundComponent,
     // UserListComponent,
     // StudentListComponent
   ],
