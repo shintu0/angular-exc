@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsersService } from './services/users.service';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-exc';
   id=1;
+  users:any;
+
+  constructor(usersService:UsersService){
+    usersService.getUsers().subscribe(data=>{
+      console.log(data);
+      this.users=data;
+    })
+  }
 
   data:string="Some data string";
 

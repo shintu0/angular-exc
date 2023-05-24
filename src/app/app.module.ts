@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ListingModule } from './listing/listing.module';
 import { ChildComponent } from './child/child.component';
+import { HttpClientModule } from '@angular/common/http';
 // import { UserListComponent } from './listing/user-list/user-list.component';
 // import { StudentListComponent } from './listing/student-list/student-list.component';
 
@@ -22,7 +23,8 @@ import { ChildComponent } from './child/child.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ListingModule
+    ListingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
